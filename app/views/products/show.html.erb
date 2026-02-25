@@ -1,2 +1,11 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1><%= @product.name %></h1>
+
+<p><strong>Price:</strong> <%= @product.price %></p>
+<p><strong>Inventory Count:</strong> <%= @product.inventory_count %></p>
+<p><strong>Vendor:</strong> <%= @product.vendor.name %></p>
+
+<hr>
+
+<p>
+  <%= link_to "Back to Products", products_path %>
+</p>

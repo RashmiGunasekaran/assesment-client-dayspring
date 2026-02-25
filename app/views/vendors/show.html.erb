@@ -1,2 +1,18 @@
-<h1>Vendors#show</h1>
-<p>Find me in app/views/vendors/show.html.erb</p>
+<h1><%= @vendor.name %></h1>
+
+<p><strong>Status:</strong> <%= @vendor.status %></p>
+<p><strong>Balance:</strong> <%= @vendor.balance %></p>
+
+<h3>Products</h3>
+
+<ul>
+  <% @vendor.products.each do |product| %>
+    <li>
+      <%= link_to product.name, product_path(product) %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "Back to Vendors", vendors_path %>
+</p>

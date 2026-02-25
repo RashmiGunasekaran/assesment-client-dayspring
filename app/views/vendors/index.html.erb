@@ -1,2 +1,22 @@
-<h1>Vendors#index</h1>
-<p>Find me in app/views/vendors/index.html.erb</p>
+<h1>Vendors</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vendors.each do |vendor| %>
+      <tr>
+        <td>
+          <%= link_to vendor.name, vendor_path(vendor) %>
+        </td>
+        <td><%= vendor.status %></td>
+        <td><%= vendor.balance %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
