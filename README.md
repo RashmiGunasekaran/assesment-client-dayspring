@@ -1,4 +1,4 @@
-# Dayspring Shopline – Intern Assessment
+# Dayspring Shopline – Internal Assessment
 Dayspring Shopline is a Rails 8 e-commerce–style application used as a boilerplate for intern assessment.  
 Candidates are expected to implement features on top of the provided structure by following best practices.
 
@@ -32,194 +32,183 @@ Ensure you have the following installed:
 
 ### Clone the Repository and Install Dependencies
 
-goto your bash and provide the below commands
+Goto your bash and provide the below commands
 
-git clone <your-repo-url>
-cd dayspring_shopline
-bundle install
-rails db:setup
-rails db:seed
-rails s
+  - git clone <your-repo-url>
 
-🔐 Authentication & Login
+  - cd dayspring_shopline
+
+  - bundle install
+
+  - rails db:setup
+
+  - rails db:seed
+
+  - rails s
+
+## Authentication & Login
 
 This application uses Devise for authentication.
 
-###Sign Up
+## Sign Up
 - Sign up is enabled for testing purposes.
 - Newly registered users default to the customer role.
-- Interns are encouraged to use seeded credentials instead of signing up.
+- #### Interns are encouraged to use seeded credentials instead of signing up.
 
-👥 Seeded Login Credentials
-  🔑 Admin Users
-    admin0@dayspring.com
-    admin1@dayspring.com
-  🏪 Vendor Users
-    vendor0@dayspring.com
-    vendor1@dayspring.com
-    vendor2@dayspring.com
-  🛍 Customer Users
-    customer0@dayspring.com
-    customer1@dayspring.com
-    customer2@dayspring.com
+## Seeded Login Credentials
+  - Admin Users
+    - admin0@dayspring.com
+    - admin1@dayspring.com
+  - Vendor Users
+    - vendor0@dayspring.com
+    - vendor1@dayspring.com
+    - vendor2@dayspring.com
+  - Customer Users
+    - customer0@dayspring.com
+    - customer1@dayspring.com
+    - customer2@dayspring.com
   
   (Many additional seeded users are available.)
 
-  🧭 Application Structure
-User Roles
+  ## Application Structure
+  - User Roles
 
-The application uses a single users table with a role enum.
+    The application uses a single users table with a role enum.
 
-Customer → User with role customer
+  - Customer → User with role customer
 
-Vendor → User with role vendor + associated Vendor record
+    Vendor → User with role vendor + associated Vendor record
 
-Admin → User with role admin
+    Admin → User with role admin
 
-There is no separate customers table by design.
+ #### There is no separate customers table by design.
 
-Controllers
+### Controllers
 
-All controllers already exist
+ - Most controllers already exist you have to decide before creating a new one.
 
-Each controller includes:
+ - Each controller includes:
 
-before_action :authenticate_user!
+    - before_action :authenticate_user!
 
-Only minimal actions (index, show) are implemented
+    - Only minimal actions (index, show) are implemented
 
-Candidates are expected to:
+ - #### Candidates are expected to:
 
-add new actions
+    - add new actions
 
-add business logic
+    - add business logic
 
-refactor controllers
+    - refactor controllers
 
-enforce authorization rules
+### Routing
 
-Routing
+  - Only basic RESTful routes are provided.
 
-Only basic RESTful routes are provided.
+  - Candidates must:
 
-Candidates must:
+    - design task-specific routes
 
-design task-specific routes
+    - choose between member vs collection routes
 
-choose between member vs collection routes
+    - follow REST conventions
 
-follow REST conventions
+    - avoid non-RESTful “junk” routes
 
-avoid non-RESTful “junk” routes
+### UI & Theme
 
-🎨 UI & Theme
+  - Bootstrap 5 is used for styling
 
-Bootstrap 5 is used for styling
+  - JavaScript is handled via Importmap
 
-JavaScript is handled via Importmap
+  - A soft pink theme is applied
 
-A soft pink theme is applied
+  - Sidebar visibility is role-based
 
-Sidebar visibility is role-based
+  - Authorization may not be enforced in views by default
 
-Authorization is not enforced in views by default
+#### UI scaffolding exists for usability only — it is not a solution.
 
-UI scaffolding exists for usability only — it is not a solution.
+### Active Storage
 
-📦 Active Storage
+  - Active Storage is installed and ready to use.
 
-Active Storage is installed and ready to use.
+  - Candidates may:
 
-Candidates may:
+    - attach files to models
 
-attach files to models
+    - design upload and preview UI
 
-apply validations
+### Assessment Instructions
 
-design upload and preview UI
+  - Keep controllers thin
 
-📋 Assessment Instructions
+  - Move business logic to models
 
-All assessment tasks are documented in:
+  - Use scopes where appropriate
 
-ASSESSMENT.md
-Global Rules (Apply to ALL Tasks)
+  - Use database transactions when data consistency matters
 
-Keep controllers thin
+### Follow Rails best practices
 
-Move business logic to models
+### Known Non-Issues (Safe to Ignore)
 
-Use scopes where appropriate
+  - You may see log entries such as:
 
-Avoid N+1 queries
-
-Use database transactions when data consistency matters
-
-Follow Rails best practices
-
-🧪 Development Notes (Important)
-Bootstrap + Turbo
-
-Bootstrap JavaScript components are initialized on Turbo page loads.
-
-When adding new Bootstrap components (dropdowns, modals, tooltips), ensure they are compatible with Turbo navigation.
-
-Known Non-Issues (Safe to Ignore)
-
-You may see log entries such as:
-
-No route matches [GET] "/_/xxxx.js"
-No route matches [GET] "/.well-known/..."
+    - No route matches [GET] "/_/xxxx.js"
+    - No route matches [GET] "/.well-known/..."
 
 These are browser or devtool requests and do not indicate application errors.
 
-🔒 Branching Strategy
+## Branching Strategy
 
-boilerplate / main branch
+  - Create your branch with the below format.
 
-Contains only the starter application
+  name/task-number-short-description
 
-No intern solutions are merged here
+  eg: rashmi/task-1-product-reviews
 
-evaluator branch
+  - Create your commit message with below format
 
-Interns raise Pull Requests against this branch
+  Commit message should be small, logical, readable.
 
-Used for evaluation and review
+  Task-X: Short and clear description
+  
+  eg: Task-20: Add scope for top-tier vendors
 
-✅ Expected Outcome for Candidates
+  ## Expected Outcome for Candidates
 
-By completing the assessment, candidates should demonstrate:
+  By completing the assessment, candidates should demonstrate:
 
-Strong understanding of Rails models & associations
+  - Strong understanding of Rails models & associations
 
-RESTful routing design
+  - RESTful routing design
 
-Query optimization
+  - Query at relavent places
 
-Business rule enforcement
+  - Business rule enforcement
 
-Clean controller structure
+  Clean controller structure
 
-Reasonable UI/UX decisions
+  Reasonable UI/UX decisions
 
-🌸 Final Note
+## Final Note
 
-This codebase is intentionally incomplete.
+  - This codebase is intentionally incomplete.
 
-You are expected to:
+  - You are expected to:
 
-think critically
+    - think critically
 
-design clean solutions
+    - design clean solutions
 
-refactor where necessary
+    - refactor where necessary
 
-explain your decisions
+    - explain your decisions
 
-There is no single correct implementation.
+  - There is no single correct implementation.
 
-Happy coding 💐
-— Dayspring Engineering Team
+#### Happy coding 💐
+— Engineering Team
 
 ---
