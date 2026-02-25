@@ -9,6 +9,6 @@
  * Consider organizing styles into separate files for maintainability.
  */
 /*
- *= require application.bootstrap
+ *= require_self
  *= require pink_theme
  */

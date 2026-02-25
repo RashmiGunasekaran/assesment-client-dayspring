@@ -7,7 +7,7 @@
 
 /* Global background */
 body {
-  background-color: var(--bs-light);
+  background-color: #f6c1d1;
 }
 
 /* Navbar */
@@ -86,4 +86,21 @@ a:hover {
   width: 100%;
   max-width: 420px;
   border-radius: 14px;
+}
+
+/* Login page card sizing */
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 14px;
+}
+
+.bg-pink {
+  background-color: #ffc0cb !important; 
+  color: white; 
+}
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: pink;
 }
