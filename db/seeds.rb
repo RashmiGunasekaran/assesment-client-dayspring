@@ -47,6 +47,27 @@ vendor_users = 15.times.map do |i|
   )
 end
 
+User.create!(
+  name: "Alexa",
+  email: "alexa@dayspring.com",
+  password: "password",
+  role: "admin"
+)
+
+User.create!(
+  name: "Siri",
+  email: "siri@dayspring.com",
+  password: "password",
+  role: "customer"
+)
+
+User.create!(
+  name: "Gemini",
+  email: "gemini@dayspring.com",
+  password: "password",
+  role: "vendor"
+)
+
 puts "✔ Users created"
 
 # --- VENDORS ---
