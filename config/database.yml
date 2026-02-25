@@ -15,13 +15,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
   max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: dayspring_shopline_development
   pool: 5
   username: postgres
-  password: myroot #replace ur postgres password
+  password: myroot #todo: dayspring assesment notes - replace ur postgres password
   host: 127.0.0.1
 
 
