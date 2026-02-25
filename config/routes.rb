@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    get "vendors/index"
-    get "products/index"
-  end
-  get "vendors/index"
-  get "vendors/show"
-  get "orders/index"
-  get "orders/show"
-  get "products/index"
-  get "products/show"
 
   devise_for :users
 
@@ -21,5 +11,9 @@ Rails.application.routes.draw do
   resources :wishlists
   resources :vendors
   
+  namespace :admin do
+    resources :products, only: [:index]
+    resources :vendors,  only: [:index]
+  end
 
 end

@@ -1,0 +1,89 @@
+:root {
+  --bs-primary: #e75480;      /* Rose pink */
+  --bs-secondary: #f6c1d1;    /* Soft blush */
+  --bs-light: #fff5f8;        /* Very light pink background */
+  --bs-dark: #4a2c34;         /* Muted wine */
+}
+
+/* Global background */
+body {
+  background-color: var(--bs-light);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f1c6d3;
+}
+
+/* Sidebar */
+aside {
+  background: linear-gradient(180deg, #f8c8d8, #f2a7c2);
+}
+
+aside h4 {
+  font-weight: 600;
+}
+
+aside .nav-link {
+  color: #4a2c34 !important;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+aside .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: #d94b73;
+  border-color: #d94b73;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  border: none;
+}
+
+.card.shadow-sm {
+  box-shadow: 0 6px 18px rgba(231, 84, 128, 0.15);
+}
+
+/* Tables */
+.table thead {
+  background-color: #fde2ea;
+}
+
+.table th {
+  color: #4a2c34;
+}
+
+/* Links */
+a {
+  color: #d6336c;
+}
+
+a:hover {
+  color: #b02a55;
+}
+
+/* === Devise Auth Page Centering (Bulletproof) === */
+.devise-auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.devise-auth-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+}
