@@ -1,7 +1,9 @@
+<h1>Vendor Dashboard</h1>
+
 <h2>Underperforming Products</h2>
 
-<% if @underperforming_products.any? %>
-  <table>
+<% if @underperforming_products.present? %>
+  <table border="1" cellpadding="8" cellspacing="0">
     <thead>
       <tr>
         <th>Product Name</th>
@@ -14,11 +16,11 @@
         <tr>
           <td><%= product.name %></td>
           <td><%= number_to_currency(product.price) %></td>
-        <td><%= product.inventory_count %></td> 
+          <td><%= product.inventory_count %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 <% else %>
-  <p>No underperforming products found.</p>
+  <p> All your products have at least one sale.</p>
 <% end %>

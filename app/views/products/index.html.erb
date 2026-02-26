@@ -1,32 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="mb-4">
-  <h2>Welcome, <%= current_user.name.titleize  || "Guest" %></h2>
-  <p class="text-muted">
-    Use the menu on the left to explore the application.
-  </p>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f8f9fb;
+      color: #333;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: #ffffff;
+      border-right: 1px solid #e5e7eb;
+      padding: 20px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 10px 12px;
+      margin-bottom: 6px;
+      text-decoration: none;
+      color: #555;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .nav a.active,
+    .nav a:hover {
+      background: #eef2ff;
+      color: #4f46e5;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+    }
+
+    .main {
+      flex: 1;
+      padding: 24px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .topbar input {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 220px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      padding: 16px;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .actions button {
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: #fff;
+      font-size: 13px;
+      margin-right: 6px;
+      cursor: pointer;
+    }
+
+    .add-btn {
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead {
+      background: #f9fafb;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    th {
+      font-weight: 600;
+      color: #555;
+    }
+
+    tbody tr:hover {
+      background: #fafafa;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .product img {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    /* Status badges */
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .in-stock {
+      background: #e6f4ea;
+      color: #198754;
+    }
+
+    .out-stock {
+      background: #fdecea;
+      color: #dc3545;
+    }
+
+    .coming {
+      background: #fff4e5;
+      color: #fd7e14;
+    }
+
+    .actions-icons {
+      text-align: right;
+    }
+
+    .actions-icons span {
+      margin-left: 10px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      font-size: 13px;
+    }
+
+    .pages span {
+      margin: 0 6px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .pages span.active {
+      font-weight: 700;
+      color: #4f46e5;
+    }
+  </style>
+</head>
+
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="logo">Miguel Studio</div>
+
+    <nav class="nav">
+      <a href="#">Dashboard</a>
+      <a href="#" class="active">Products</a>
+      <a href="#">Orders</a>
+      <a href="#">Customers</a>
+      <a href="#">Analytics</a>
+      <a href="#">Payments</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="nav">Help</a>
+      <a href="#" class="nav">Settings</a>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <h2>Products</h2>
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="actions">
+          <button>Sort</button>
+          <button>Filter</button>
+        </div>
+        <button class="add-btn">+ Add Product</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="product">
+              <img src="https://via.placeholder.com/36">
+              Mens T-shirt
+            </td>
+            <td>Clothes</td>
+            <td><span class="badge out-stock">Out of stock</span></td>
+            <td>449</td>
+            <td>$172.00</td>
+            
+          </tr>
+
+          <tr>
+            <td class="product">
+              <img src="https://via.placeholder.com/36">
+              Leather Hand Bag
+            </td>
+            <td>Bag</td>
+            <td><span class="badge in-stock">In Stock</span></td>
+            <td>223</td>
+            <td>$112.00</td>
+            
+          </tr>
+
+          <tr>
+            <td class="product">
+              <img src="https://via.placeholder.com/36">
+              Stylish Shoe
+            </td>
+            <td>Shoe</td>
+            <td><span class="badge coming">Coming Soon</span></td>
+            <td>98</td>
+            <td>$195.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <span>Show 11 per page</span>
+        <div class="pages">
+          <span class="active">1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
 </div>
+</body>
+</html>
 
-<h1>Products</h1>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Inventory</th>
-      <th>Vendor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td>
-          <%= link_to product.name, product_path(product) %>
-        </td>
-        <td><%= product.price %></td>
-        <td><%= product.inventory_count %></td>
-        <td><%= product.vendor.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+

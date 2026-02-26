@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   resources :order_items
   resources :reviews
   resources :wishlists
-  resources :vendors
+  resources :vendors do
+    member do
+      get :dashboard
+    end
+  end
   
   namespace :admin do
     resources :products, only: [:index]

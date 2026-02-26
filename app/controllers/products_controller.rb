@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
                                   .select(:id, :name, :price, :inventory_count)
                                   .order(:name)
 
-    @underperforming_products ||= []
+    # @underperforming_products ||= []
   end
   
 end

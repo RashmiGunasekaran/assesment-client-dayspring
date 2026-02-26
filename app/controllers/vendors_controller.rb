@@ -47,6 +47,3 @@ end
 
 
 
-class VendorsController < ApplicationController
-  
-end
