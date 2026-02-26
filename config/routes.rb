@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root "products#index"
 
   resources :products
-  resources :orders
+  resources :orders 
+   get 'create_order/:product_id',to:"orders#create_order",as:"create_order"
   resources :order_items
   resources :reviews
   resources :wishlists

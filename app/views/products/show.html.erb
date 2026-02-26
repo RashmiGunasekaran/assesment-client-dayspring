@@ -5,7 +5,9 @@
 <p><strong>Vendor:</strong> <%= @product.vendor.name %></p>
 
 <hr>
-
+<p>
+</p>
+<%= link_to "Create Order", new_order_path(product_id:@product.id) %>
 <p>
   <%= link_to "Back to Products", products_path %>
 </p>

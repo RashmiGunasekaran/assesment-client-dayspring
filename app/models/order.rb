@@ -3,6 +3,7 @@ class Order < ApplicationRecord
 
   # Associations
   belongs_to :customer, class_name: "User"
+  belongs_to :discount
 
   has_many :order_items, dependent: :destroy
   has_many :products, through: :order_items

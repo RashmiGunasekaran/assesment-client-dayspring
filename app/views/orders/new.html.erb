@@ -1,0 +1,23 @@
+<div class="container">
+  <%= form_with model: @order do |f| %>
+
+    <div>
+      <%= @product.name %>
+    </div>
+
+    <div>
+    <%=f.label :total_price %>
+      <%= f.number_field :total_price, value: @product.price %>
+    </div>
+
+    <div>
+      <%= f.label :discount_id, "Apply Discount" %>
+      <%= f.collection_select :discount_id, Discount.all, :id, :code %> 
+    </div>
+
+    <div>
+    <%= f.submit "create_order"%>
+    </div>
+
+  <% end %>
+</div>
