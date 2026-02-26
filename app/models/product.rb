@@ -9,5 +9,8 @@ class Product < ApplicationRecord
 
   has_many :wishlists, dependent: :destroy
   has_many :wishlisted_by_users, through: :wishlists, source: :user
-  scope :check_stock, -> { where("inventory_count > ?", 10) }
+  # scope :check_stock, -> { where("inventory_count > ?", 10) }
+  def low_stock
+    inventory_count > 10
+  end
 end

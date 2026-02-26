@@ -1,55 +1,37 @@
+  <div class="mb-4">
+    <h2>Welcome, <%= current_user.role || "Guest" %></h2>
+    <p class="text-muted">
+      Use the menu on the left to explore the application.
+    </p>
+  </div>
 
-<div class="mb-4">
-  <h2>Welcome, <%= current_user.role  || "Guest" %></h2>
-  <p class="text-muted">
-    Use the menu on the left to explore the application.
-  </p>
-</div>
+  <h1 class="mb-3">Products</h1>
 
-<h1>Products</h1>
-
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Inventory</th>
-      <th>Vendor</th>
-    </tr>
-  </thead>
-  <tbody>
-   <%if current_user.role == "customer"%>
-    <% @products.each do |product| %>
-      <tr>
-        <%if product.inventory_count > 10 %>
-        <td>
-          <%= link_to product.name, product_path(product) %>
-        </td>
-        <td><%= product.price %></td>
-        <td><%= product.inventory_count%></td>
-        <td><%= product.vendor.name %></td>
+  <div class="table-responsive">
+  <table class="table table-bordered table-hover align-middle">
+   <thead style="background-color: #e75480; color: white;">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Inventory</th>
+          <th>Vendor</th>
+        </tr>
+      </thead>
+      <tbody>        
+          <% @products.each do |product| %>
+            <tr>
+              <td><%= product.name %></td>
+              <td><%= number_to_currency(product.price) %></td>
+              <td>
+                <% if product.inventory_count < 10 %>
+                  <span class="badge bg-danger"><%= product.inventory_count %> Low</span>
+                <% else %>
+                  <span class="badge bg-success"><%= product.inventory_count %></span>
+                <% end %>
+              </td>
+              <td><%= product.vendor.name %></td>
+            </tr>
         <% end %>
-      </tr>
-       <% end %>
-       <% else %>
-    
-    <% @products.each do |product| %>
-      <tr>
-
-        <td>
-          <%= link_to product.name, product_path(product) %>
-        </td>
-       
-        
-        <td><%= product.price %></td>
-        <td><%= product.inventory_count%></td>
-
-        <td><%= product.vendor.name %></td>
-
-
-    <% end %>
-    <% end %>
-   
-
-  </tbody>
-</table>
+      </tbody>
+    </table>
+  </div>
