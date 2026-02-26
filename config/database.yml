@@ -19,8 +19,14 @@ default: &default
   database: dayspring_shopline_development
   pool: 5
   username: postgres
-  password: myroot #todo: dayspring assesment notes - replace ur postgres password
+  password: root
   host: 127.0.0.1
+
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: root
+  host: localhost
 
 
 development:

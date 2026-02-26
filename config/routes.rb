@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   root "products#index"
 
-  resources :products
+  resources :products do
+    collection do
+      get :underperforming 
+    end
+  end
   resources :orders
   resources :order_items
   resources :reviews
