@@ -30,3 +30,29 @@
     <% end %>
   </tbody>
 </table>
+
+
+<div>
+  <% i = 5 %>
+    <% if i > 0 %>
+
+      <% @high_sell_products.each do |item| %>
+            <% if item.order.status = 1  %>
+              <table border="2" cellpadding="10">
+                <tr>
+                  <td>
+                    Names:
+                  </td>
+                  <td>
+                    <%= item.product.name %>
+                  </td>
+                </tr>
+
+              </table>    
+              <% i = i-1 %>
+            <% end %>
+
+      <% end %>
+
+  <% end %>
+</div>
