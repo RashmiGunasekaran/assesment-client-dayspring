@@ -8,11 +8,12 @@ class Order < ApplicationRecord
   has_many :products, through: :order_items
 
   def vendor_cannot_buy_own_product
-    return unless order&.customer && product&.vendor
+    return unless order.customer && product.vendor
 
     if product.vendor.user_id == order.customer_id
-      errors.add(:product, "You cannot purchase your own product")
+      errors.add(:product, "cannot purchase own product")
     end
   end
-
+n
 end
+

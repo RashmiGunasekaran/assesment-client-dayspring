@@ -1,14 +1,37 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
-/*
- *= require_self
- *= require pink_theme
- */
+
+
+.linktext{
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+.place_order_btn{
+    font-weight: bold;
+    border-radius: 20%;
+    padding: 8px;
+    background-color: green;
+    color:darkgoldenrod;
+    text-decoration: none;
+}
+
+.instock{
+    border-radius: 10%;
+    padding: 8px;
+    background-color: green;
+    color: yellow;
+}
+
+.lowinstock{
+    border-radius: 10%;
+    padding: 8px;
+    background-color:yellow;
+    color: red;
+}
+
+.outofstock{
+    border-radius: 10%;
+    padding: 8px;
+    background-color:rgb(238, 172, 172);
+    color: red;
+}

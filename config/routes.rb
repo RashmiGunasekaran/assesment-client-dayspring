@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   resources :wishlists
   resources :vendors
   # config/routes.rb
-resources :orders, only: [:create]
+  
+  # resources :orders, only: [:create]
   
   get "products/:id/place_order_path", to: "products#place_order", as: "place_order"
 

@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
     if product.vendor.user == current_user
       redirect_to products_path, notice: "You cannot purchase your own product"
-      return
+      # return
     end
 
     order = current_user.orders.create!
@@ -26,5 +26,3 @@ class ProductsController < ApplicationController
   end
 
 end
-
-
