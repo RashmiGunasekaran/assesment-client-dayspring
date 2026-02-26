@@ -3,7 +3,9 @@
 <p><strong>Price:</strong> <%= @product.price %></p>
 <p><strong>Inventory Count:</strong> <%= @product.inventory_count %></p>
 <p><strong>Vendor:</strong> <%= @product.vendor.name %></p>
-
+<%= button_to "Add to Wishlist",
+    product_wishlist_path(@product),
+    method: :post %>
 <hr>
 
 <p>

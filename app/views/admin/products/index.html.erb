@@ -1,2 +1,21 @@
-<h1>Admin::Products#index</h1>
-<p>Find me in app/views/admin/products/index.html.erb</p>
+<h2>Low Stock Products</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Vendor</th>
+      <th>Inventory Count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.vendor.name %></td>
+        <td><%= product.inventory_count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
