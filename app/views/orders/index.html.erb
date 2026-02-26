@@ -13,7 +13,12 @@
     <% @orders.each do |order| %>
       <tr>
         <td>
-          <%= link_to order.id, order_path(order) %>
+          <span class="order-link-wrapper">
+            <%= check_box_tag "order_ids[]", order.id %>
+            <%= link_to order.id, order_path(order), class: "unstyled-link" %>
+          </span>
+
+          <%#= link_to order.id, order_path(order) , class: "unstyle" %>
         </td>
         <% if order.status == "pending" %>
            <td>

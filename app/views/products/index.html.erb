@@ -8,25 +8,56 @@
 
 <h1>Products</h1>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Inventory</th>
-      <th>Vendor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
+<!-- Include Bootstrap Icons CDN in your <head> if not already installed -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net"> -->
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped table-hover align-middle">
+    <thead class="table-dark">
       <tr>
-        <td>
-          <%= link_to product.name, product_path(product) %>
-        </td>
-        <td><%= product.price %></td>
-        <td><%= product.inventory_count %></td>
-        <td><%= product.vendor.name %></td>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Inventory</th>
+        <th scope="col">Vendor</th>
+        <th scope="col" class="text-center">Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td class="fw-bold text-primary">
+            <%= link_to product.name, product_path(product), class: "text-decoration-none" %>
+          </td>
+          <td><%= number_to_currency(product.price) %></td>
+          <td>
+            <% if product.inventory_count > 10 %>
+              <span class="badge bg-success"><i class="bi bi-box-seam"></i> <%= product.inventory_count %></span>
+            <% elsif product.inventory_count > 0 %>
+              <span class="badge bg-warning text-dark"><i class="bi bi-exclamation-triangle"></i> <%= product.inventory_count %></span>
+            <% else %>
+              <span class="badge bg-danger"><i class="bi bi-x-circle"></i> Out of Stock</span>
+            <% end %>
+          </td>
+          <td><%= product.vendor.name %></td>
+          <td class="text-center">
+            <!-- Edit Button -->
+            <%= link_to edit_product_path(product), class: "btn btn-outline-primary btn-sm me-1", title: "Edit" do %>
+              <i class="bi bi-pencil-square"></i>
+            <% end %>
+            
+            <!-- Delete Button -->
+            <%= link_to product_path(product), 
+                        method: :delete, 
+                        data: { confirm: 'Are you sure?' }, 
+                        class: "btn btn-outline-danger btn-sm", 
+                        title: "Delete" do %>
+              <i class="bi bi-trash"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+

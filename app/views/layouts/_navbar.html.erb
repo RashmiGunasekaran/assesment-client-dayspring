@@ -1,19 +1,20 @@
-<nav class="navbar navbar-light bg-white shadow-sm mb-4">
+
+<nav class="navbar navbar-light shadow-m border-bottom rounded bg-light">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h4"; style="font-style: italic;">
       Dayspring Shopline
     </span>
 
-    <div>
+    <div class="d-inline">
       <span class="me-3 text-muted">
-        <%= current_user.name %> (<%= current_user.role %>)
+        <strong><%= current_user.name %></strong> (<%= current_user.role %>)
       </span>
-
+      <span>
       <%= button_to "Logout",
               destroy_user_session_path,
               method: :delete,
               class: "btn btn-outline-info btn-sm",
-              form: { data: { turbo: false } } %>
+              form: { data: { turbo: false } } %></span>
     </div>
   </div>
 </nav>
