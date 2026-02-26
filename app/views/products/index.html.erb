@@ -9,7 +9,7 @@
 <h1>Products</h1>
 
 <table class="table table-bordered">
-  <thead>
+  <thead >
     <tr>
       <th>Name</th>
       <th>Price</th>
@@ -21,11 +21,11 @@
     <% @products.each do |product| %>
       <tr>
         <td>
-          <%= link_to product.name, product_path(product) %>
+          <%= button_to product.name, product_path(product) , class: "h"%>
         </td>
-        <td><%= product.price %></td>
-        <td><%= product.inventory_count %></td>
-        <td><%= product.vendor.name %></td>
+        <td> 💵 <%= product.price %></td>
+        <td> 🧑‍💻<%= product.inventory_count %></td>
+        <td> 🤵<%= product.vendor.name %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,12 +1,13 @@
+<% if @order.errors.any? %>
+      <% @order.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
 
-
+<% end %>
 
 <h1>Order The Products</h1>
 
-
-
 <%= form_with model:@order do |f|%>
-
 <div>
 <%=f.label :Id_for_order %>
 <%= f.collection_select :order_id, Order.all, :id, :customer_id%>
@@ -31,4 +32,3 @@
 </div>
 
 <%end%>
-
