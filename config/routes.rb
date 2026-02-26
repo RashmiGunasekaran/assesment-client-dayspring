@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root "products#index"
 
   resources :products
   resources :orders
@@ -13,7 +12,12 @@ Rails.application.routes.draw do
   
   namespace :admin do
     resources :products, only: [:index]
-    resources :vendors,  only: [:index]
+    resources :vendors,  only: [:index] do
+      collection do
+        get :top
+      end
+    end
   end
 
 end
+

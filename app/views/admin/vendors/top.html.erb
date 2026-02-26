@@ -1,23 +1,20 @@
-<h1>Vendors</h1>
+<h1>Top Vendors</h1>
 
-<table class="table table-bordered">
+<table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Status</th>
+      <th>Products</th>
       <th>Balance</th>
     </tr>
   </thead>
-  <tbody>r
+  <tbody>
     <% @vendors.each do |vendor| %>
       <tr>
-        <td>
-          <%= link_to vendor.name, vendor_path(vendor) %>
-        </td>
-        <td><%= vendor.status %></td>
+        <td><%= vendor.name %></td>
+        <td><%= vendor.products.count %></td>
         <td><%= vendor.balance %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-

@@ -98,6 +98,46 @@ end
 
 puts "✔ Products created: #{products.count}"
 
+# --- EXTRA TOP-TIER VENDOR FOR TESTING ---
+puts "🌟 Creating another top-tier vendor for testing..."
+top_vendor2_user = User.find_or_create_by!(email: "topvendor2@dayspring.com") do |u|
+  u.name = "Top Vendor 2"
+  u.password = "password"
+  u.role = :vendor
+end
+top_vendor2 = Vendor.find_or_create_by!(user: top_vendor2_user) do |v|
+  v.name = "Top Vendor 2"
+  v.balance = 3500
+  v.status = :active
+end
+12.times do |i|
+  Product.create!(
+    vendor: top_vendor2,
+    name: "Top Vendor 2 Product #{i + 1}",
+    price: 120,
+    inventory_count: 15,
+    is_clearance: false
+  )
+end
+puts "✔ Second top-tier vendor created."
+
+# --- EXTRA ADMINS ---
+puts "👤 Creating extra admin..."
+User.find_or_create_by!(email: "admin2@dayspring.com") do |u|
+  u.name = "Admin2"
+  u.password = "password"
+  u.role = :admin
+end
+puts "✔ Extra admin created."
+
+# --- EXTRA ORDERS FOR TOP VENDORS ---
+puts "🛒 Creating extra orders for top vendors..."
+Order.create!(customer: customers.first, status: :completed, total_price: 1320)
+Order.create!(customer: customers.second, status: :completed, total_price: 1440)
+puts "✔ Extra orders created."
+
+
+
 # --- DISCOUNTS ---
 puts "🏷 Creating discounts..."
 
@@ -171,3 +211,7 @@ end
 
 puts "✔ Wishlists created"
 puts "🎉 Seeding complete!"
+
+
+
+

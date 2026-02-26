@@ -4,4 +4,10 @@ class Admin::VendorsController < ApplicationController
   
   def index
   end
+
+  def top
+    @vendors = Vendor.top_tier
+  end
 end
+
+
