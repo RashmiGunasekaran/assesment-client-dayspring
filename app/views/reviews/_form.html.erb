@@ -1,0 +1,16 @@
+
+<%= form_with(model: @review) do |f| %>
+  <div>
+    <%= f.label :rating, "Star Rating (1-5)" %>
+    <%= f.number_field :rating, in: 1..5 %>
+  </div>
+
+  <div>
+    <%= f.label :comment, "Comment" %>
+    <%= f.text_area :comment, placeholder: "This is comment" %>
+  </div>
+
+  <div>
+    <%= f.submit "Submit Review" %>
+  </div>
+<% end %>

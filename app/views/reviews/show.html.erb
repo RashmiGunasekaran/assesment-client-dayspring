@@ -1,0 +1,11 @@
+
+<p>Rating: <%= @review.rating %> stars</p>
+<p>Status: <%= @review.review_status %></p>
+<% if @review.comment.present? %>
+  <p>Comment: <%= @review.comment %></p>
+<% else %>
+  <p>No comment provided.</p>
+<% end %>
+
+
+
