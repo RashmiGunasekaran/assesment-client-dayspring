@@ -1,6 +1,6 @@
 <h2>Low Stock Products</h2>
 
-<table class="table">
+<table border="1" cellpadding="8">
   <thead>
     <tr>
       <th>Product Name</th>
@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @products.each do |product| %>
+    <% (@products || []).each do |product| %>
       <tr>
         <td><%= product.name %></td>
         <td><%= product.vendor.name %></td>

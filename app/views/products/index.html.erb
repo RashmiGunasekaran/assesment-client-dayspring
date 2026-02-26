@@ -1,32 +1,68 @@
+<div class="nav">
 
-<div class="mb-4">
-  <h2>Welcome, <%= current_user.name.titleize  || "Guest" %></h2>
-  <p class="text-muted">
-    Use the menu on the left to explore the application.
-  </p>
+  <div class="nav-left">
+    <h2>Products</h2>
+  </div>
+
+  <div class="nav-right">
+    <input class="nav-search" type="text" placeholder="Search">
+
+    <span class="ico">🔔</span>
+
+    <img
+      src="https://i.pravatar.cc/32"
+      alt="profile"
+      class="avatar">
+  </div>
+
 </div>
+<div class="box">
 
-<h1>Products</h1>
+  <div class="top">
+    <h3>Products</h3>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Inventory</th>
-      <th>Vendor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
+    <div class="right">
+      <input class="inp" type="text" placeholder="Search">
+      <button class="btn">Filter</button>
+      <button class="btn">Sort</button>
+
+      <%= link_to "Add Product", new_product_path, class: "btn add" %>
+    </div>
+  </div>
+
+  <table class="tbl">
+    <thead>
       <tr>
-        <td>
-          <%= link_to product.name, product_path(product) %>
-        </td>
-        <td><%= product.price %></td>
-        <td><%= product.inventory_count %></td>
-        <td><%= product.vendor.name %></td>
+        <th>Product</th>
+        <th>Vendor</th>
+        <th>Stock</th>
+        <th>Status</th>
+        <th>Price</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% (@products || []).each do |product| %>
+        <div class="small"></div>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.vendor.name %></td>
+          <td><%= product.inventory_count %></td>
+
+          <td>
+            <% if product.inventory_count > 10 %>
+              <span class="ok">In Stock</span>
+            <% elsif product.inventory_count > 0 %>
+              <span class="low">Low</span>
+            <% else %>
+              <span class="out">Out</span>
+            <% end %>
+          </td>
+
+          <td>$<%= product.price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
