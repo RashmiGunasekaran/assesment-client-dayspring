@@ -1,0 +1,7 @@
+<h1>All Wishlist</h1>
+<% @wishlists.each do |wishlist| %>
+  <div>
+    <%= wishlist.product.name %>
+    <%= button_to "Remove", wishlists_path, method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+<% end %>
