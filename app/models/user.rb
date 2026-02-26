@@ -10,8 +10,14 @@ class User < ApplicationRecord
   has_one  :vendor, dependent: :destroy
 
   has_many :orders, foreign_key: :customer_id, dependent: :destroy
+  
   has_many :reviews, foreign_key: :customer_id, dependent: :destroy
 
   has_many :wishlists, dependent: :destroy
   has_many :wishlist_products, through: :wishlists, source: :product
+
+
+  
+
+
 end

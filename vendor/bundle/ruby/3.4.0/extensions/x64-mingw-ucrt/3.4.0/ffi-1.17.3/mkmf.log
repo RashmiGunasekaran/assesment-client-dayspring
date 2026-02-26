@@ -1,0 +1,289 @@
+pkg_config: checking for pkg-config for libffi... -------------------- ["-IC:/Ruby34-x64/msys64/ucrt64/bin/../include ", "-LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib", "-lffi"]
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 x86_64-w64-mingw32-pkg-config --exists libffi
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 x86_64-w64-mingw32-pkg-config --libs libffi |
+=> "-LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib -lffi\n"
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed     -lx64-ucrt-ruby340  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib -lffi    -lx64-ucrt-ruby340  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 x86_64-w64-mingw32-pkg-config --cflags-only-I libffi |
+=> "-IC:/Ruby34-x64/msys64/ucrt64/bin/../include\n"
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 x86_64-w64-mingw32-pkg-config --cflags-only-other libffi |
+=> "\n"
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 x86_64-w64-mingw32-pkg-config --libs-only-l libffi |
+=> "-lffi\n"
+package configuration for libffi
+incflags: -IC:/Ruby34-x64/msys64/ucrt64/bin/../include
+cflags: 
+ldflags: -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib
+libs: -lffi
+
+--------------------
+
+have_library: checking for ffi_prep_closure_loc() in -lffi... -------------------- yes
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib     -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <ffi.h>
+ 6: 
+ 7: /*top*/
+ 8: extern int t(void);
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     int (* volatile tp)(void)=(int (*)(void))&t;
+13:     printf("%d", (*tp)());
+14:   }
+15: 
+16:   return !!argv[argc];
+17: }
+18: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure_loc; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for ffi_prep_cif_var()... -------------------- yes
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib    -lffi  -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+conftest.c: In function 't':
+conftest.c:17:57: error: 'ffi_prep_cif_var' undeclared (first use in this function)
+   17 | int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_cif_var; return !p; }
+      |                                                         ^~~~~~~~~~~~~~~~
+conftest.c:17:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_cif_var; return !p; }
+/* end */
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib    -lffi  -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: extern void ffi_prep_cif_var();
+18: int t(void) { ffi_prep_cif_var(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ffi_raw_call()... -------------------- yes
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib    -lffi  -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+conftest.c: In function 't':
+conftest.c:17:57: error: 'ffi_raw_call' undeclared (first use in this function)
+   17 | int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_raw_call; return !p; }
+      |                                                         ^~~~~~~~~~~~
+conftest.c:17:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_raw_call; return !p; }
+/* end */
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib    -lffi  -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: extern void ffi_raw_call();
+18: int t(void) { ffi_raw_call(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ffi_prep_raw_closure()... -------------------- yes
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib    -lffi  -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+conftest.c: In function 't':
+conftest.c:17:57: error: 'ffi_prep_raw_closure' undeclared (first use in this function)
+   17 | int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_raw_closure; return !p; }
+      |                                                         ^~~~~~~~~~~~~~~~~~~~
+conftest.c:17:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_raw_closure; return !p; }
+/* end */
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib    -lffi  -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: extern void ffi_prep_raw_closure();
+18: int t(void) { ffi_prep_raw_closure(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_gc_mark_movable()... -------------------- yes
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib    -lffi  -lffi -lx64-ucrt-ruby340 -lffi  -lffi -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: 
+ 6: /*top*/
+ 7: extern int t(void);
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     int (* volatile tp)(void)=(int (*)(void))&t;
+12:     printf("%d", (*tp)());
+13:   }
+14: 
+15:   return !!argv[argc];
+16: }
+17: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_gc_mark_movable; return !p; }
+/* end */
+
+--------------------
+
+append_ldflags: checking for whether -pthread is accepted as LDFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby34-x64/lib;C:\Ruby34-x64\bin;C:\Ruby34-x64\msys64\ucrt64\bin;C:\Ruby34-x64\msys64\usr\bin;C:\ProgramData\rvm\wrapper;C:\Program Files\Common Files\Oracle\Java\javapath;C:\oracle\product\10.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\ProgramData\rvm\wrapper;C:\Ruby34-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\KIIT\AppData\Local\Microsoft\WindowsApps;C:\Users\KIIT\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3\bin;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.3\bin;;C:\Users\KIIT\AppData\Roaming\npm;C:\Users\KIIT\AppData\Local\GitHubDesktop\bin;C:\Users\KIIT\AppData\Local\Android\Sdk;C:\Users\KIIT\AppData\Local\Android\Sdk\platform-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\emulator;C:\Users\KIIT\AppData\Local\Android\Sdk\build-tools;C:\Users\KIIT\AppData\Local\Android\Sdk\platforms;C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot\bin" ASAN_OPTIONS=detect_leaks=0 "gcc -o conftest.exe -IC:/Ruby34-x64/include/ruby-3.4.0/x64-mingw-ucrt -IC:/Ruby34-x64/include/ruby-3.4.0/ruby/backward -IC:/Ruby34-x64/include/ruby-3.4.0 -I. -IC:/Ruby34-x64/msys64/ucrt64/bin/../include -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fstack-protector-strong  conftest.c -L. -LC:/Ruby34-x64/lib -L. -pipe -s -fstack-protector-strong -lpthread -Wl,--no-as-needed -LC:/Ruby34-x64/msys64/ucrt64/bin/../lib/../lib -pthread   -lffi  -lffi -lx64-ucrt-ruby340  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+1: #ifndef EXTCONF_H
+2: #define EXTCONF_H
+3: #define HAVE_FFI_PREP_CIF_VAR 1
+4: #define HAVE_FFI_RAW_CALL 1
+5: #define HAVE_FFI_PREP_RAW_CLOSURE 1
+6: #define HAVE_RAW_API 1
+7: #define HAVE_RB_GC_MARK_MOVABLE 1
+8: #endif
+/* end */
+

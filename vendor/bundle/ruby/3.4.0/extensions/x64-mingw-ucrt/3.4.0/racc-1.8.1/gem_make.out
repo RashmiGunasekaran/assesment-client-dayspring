@@ -1,0 +1,19 @@
+current directory: C:/Users/KIIT/Desktop/DaySpring/assesment-client-dayspring/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/KIIT/Desktop/DaySpring/assesment-client-dayspring/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make -j9 DESTDIR\= sitearchdir\=./.gem.20260226-4000-n607hm sitelibdir\=./.gem.20260226-4000-n607hm clean
+
+current directory: C:/Users/KIIT/Desktop/DaySpring/assesment-client-dayspring/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make -j9 DESTDIR\= sitearchdir\=./.gem.20260226-4000-n607hm sitelibdir\=./.gem.20260226-4000-n607hm
+generating cparse-x64-mingw-ucrt.def
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: C:/Users/KIIT/Desktop/DaySpring/assesment-client-dayspring/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make -j9 DESTDIR\= sitearchdir\=./.gem.20260226-4000-n607hm sitelibdir\=./.gem.20260226-4000-n607hm install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20260226-4000-n607hm/racc
+
+current directory: C:/Users/KIIT/Desktop/DaySpring/assesment-client-dayspring/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260226-4000-n607hm sitelibdir\=./.gem.20260226-4000-n607hm clean

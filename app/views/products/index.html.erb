@@ -15,6 +15,7 @@
       <th>Price</th>
       <th>Inventory</th>
       <th>Vendor</th>
+      <th>Place Order</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,8 @@
         <td><%= product.price %></td>
         <td><%= product.inventory_count %></td>
         <td><%= product.vendor.name %></td>
+        <td><%= link_to "Place order", place_order_path(product) %>
+        </td>
       </tr>
     <% end %>
   </tbody>
