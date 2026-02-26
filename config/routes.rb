@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :reviews
   resources :wishlists
   resources :vendors
-  
+
   namespace :admin do
-    resources :products, only: [:index]
+    resources :products, only: [:index,:show] 
     resources :vendors,  only: [:index]
   end
 

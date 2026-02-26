@@ -9,5 +9,8 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
+  def out_of_stock
+    @products = Product.out_of_stock
+  end
 
 end
