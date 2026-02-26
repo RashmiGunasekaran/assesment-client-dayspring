@@ -7,52 +7,90 @@
 </div>
 
 <h1>Products</h1>
+<div style="display:  flex;
+            flex-direction: row;
+            align-items:center;
+            justify-content: space-between;">
+    <input type="search" placeholder="Search" />
 
-<table class="table table-bordered">
+
+
+
+    <div>
+      <button type="button" class="btn btn-light ">Sort</button>
+      <button type="button" class="btn btn-light">Filter</button>
+      <button type="button" class="btn btn-primary">Add Products</button>
+    </div>
+</div>
+
+<br>
+   
+<table class="table table-bordered" style="border=2px solid black;">
   <thead>
     <tr>
+      <th><input type="checkbox"></th>
       <th>Name</th>
       <th>Price</th>
       <th>Inventory</th>
       <th>Vendor</th>
+      <th>Status</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><input type="checkbox"></td>
         <td>
           <%= link_to product.name, product_path(product) %>
         </td>
         <td><%= product.price %></td>
         <td><%= product.inventory_count %></td>
         <td><%= product.vendor.name %></td>
+
+        <td>
+          <%= [:Active, :InActive].sample(1)  %>
+            
+        </td>
+
+        <td>
+          <button method="delete">Delete</button>
+          <button method="patch">Edit</button>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 
+
+
+<% if true %>
 <div>
-  <% i = 5 %>
-    <% if i > 0 %>
+  
 
       <% @high_sell_products.each do |item| %>
-            <% if item.order.status = 1  %>
-              <table border="2" cellpadding="10">
-                <tr>
-                  <td>
-                    Names:
-                  </td>
-                  <td>
-                    <%= item.product.name %>
-                  </td>
-                </tr>
 
-              </table>    
-              <% i = i-1 %>
+            
+            <% if item.order.status = 1  %>
+
+              
+                <table border="2" cellpadding="10">
+                  <tr>
+                    <td>
+                      Names:
+                    </td>
+                    <td>
+                      <%= item.product.name %>
+                    </td>
+                  </tr>
+
+                </table>
+                  
+              
             <% end %>
 
       <% end %>
-
-  <% end %>
 </div>
+
+<% end %>
