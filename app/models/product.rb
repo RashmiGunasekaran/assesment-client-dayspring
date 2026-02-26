@@ -1,4 +1,10 @@
 class Product < ApplicationRecord
+# Scope to get the available products 
+   scope :avaliable_products,-> { where(is_clearance: true) }
+
+
+
+
   # Associations
   belongs_to :vendor
 
@@ -9,4 +15,10 @@ class Product < ApplicationRecord
 
   has_many :wishlists, dependent: :destroy
   has_many :wishlisted_by_users, through: :wishlists, source: :user
+
+
+
+
+  
+
 end

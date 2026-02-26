@@ -1,2 +1,42 @@
-<h1>Admin::Products#index</h1>
-<p>Find me in app/views/admin/products/index.html.erb</p>
+
+<div class="mb-4">
+  <h2>Welcome, <%= current_user.name.titleize  || "Guest" %></h2>
+  <p class="text-muted">
+    Use the menu on the left to explore the application.
+  </p>
+</div>
+
+<% if notice %>
+<script>
+    alert("<%= notice %>")
+</script>
+
+<% end %>
+
+<h1>Products</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Inventory</th>
+      <th>Vendor</th>
+       <th> Action </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td>
+          <%= link_to product.name, product_path(product) %>
+        </td>
+        <td><%= product.price %></td>
+        <td><%= product.inventory_count %></td>
+        <td><%= product.vendor.name %></td>
+        <%# This goes to admin::product controller of update method with the product_id  %>
+        <td><%= button_to "Delete" , admin_product_path(product.id) , method: :patch ,class: "delete_btn" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -12,3 +12,15 @@
  *= require_self
  *= require pink_theme
  */
+
+
+.delete_btn{
+
+	height: 40px;
+	width: 90px;
+	border-radius: 20px;
+	background-color: red;
+	color: white;
+}
+
+

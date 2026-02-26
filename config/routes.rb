@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :vendors
   
   namespace :admin do
-    resources :products, only: [:index]
+    resources :products, only: [:index, :update]
     resources :vendors,  only: [:index]
   end
 
