@@ -1,13 +1,3 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
 puts "🌱 Seeding started..."
 
 # --- CLEANUP ---
@@ -20,53 +10,58 @@ Vendor.delete_all
 Discount.delete_all
 User.delete_all
 
+# Helper to derive name from email
+def name_from_email(email)
+  email.split("@").first.titleize
+end
+
 # --- USERS ---
 puts "👤 Creating users..."
 
 admins = 2.times.map do |i|
-  User.create!(
-    email: "admin#{i}@dayspring.com",
-    password: "password",
-    role: :admin
-  )
+  email = "admin#{i}@dayspring.com"
+  User.find_or_create_by!(email: email) do |u|
+    u.name = name_from_email(email)
+    u.password = "password"
+    u.role = :admin
+  end
 end
 
 customers = 25.times.map do |i|
-  User.create!(
-    email: "customer#{i}@dayspring.com",
-    password: "password",
-    role: :customer
-  )
+  email = "customer#{i}@dayspring.com"
+  User.find_or_create_by!(email: email) do |u|
+    u.name = name_from_email(email)
+    u.password = "password"
+    u.role = :customer
+  end
 end
 
 vendor_users = 15.times.map do |i|
-  User.create!(
-    email: "vendor#{i}@dayspring.com",
-    password: "password",
-    role: :vendor
-  )
+  email = "vendor#{i}@dayspring.com"
+  User.find_or_create_by!(email: email) do |u|
+    u.name = name_from_email(email)
+    u.password = "password"
+    u.role = :vendor
+  end
 end
 
-User.create!(
-  name: "Alexa",
-  email: "alexa@dayspring.com",
-  password: "password",
-  role: "admin"
-)
+User.find_or_create_by!(email: "alexa@dayspring.com") do |u|
+  u.name = "Alexa"
+  u.password = "password"
+  u.role = :admin
+end
 
-User.create!(
-  name: "Siri",
-  email: "siri@dayspring.com",
-  password: "password",
-  role: "customer"
-)
+User.find_or_create_by!(email: "siri@dayspring.com") do |u|
+  u.name = "Siri"
+  u.password = "password"
+  u.role = :customer
+end
 
-User.create!(
-  name: "Gemini",
-  email: "gemini@dayspring.com",
-  password: "password",
-  role: "vendor"
-)
+User.find_or_create_by!(email: "gemini@dayspring.com") do |u|
+  u.name = "Gemini"
+  u.password = "password"
+  u.role = :vendor
+end
 
 puts "✔ Users created"
 
@@ -74,12 +69,11 @@ puts "✔ Users created"
 puts "🏪 Creating vendors..."
 
 vendors = vendor_users.map.with_index do |user, i|
-  Vendor.create!(
-    user: user,
-    name: "Vendor #{i + 1}",
-    balance: rand(-500..5000),
-    status: [:active, :suspended].sample
-  )
+  Vendor.find_or_create_by!(user: user) do |v|
+    v.name = "Vendor #{i + 1}"
+    v.balance = rand(-500..5000)
+    v.status = [:active, :suspended].sample
+  end
 end
 
 puts "✔ Vendors created"
@@ -107,12 +101,15 @@ puts "✔ Products created: #{products.count}"
 # --- DISCOUNTS ---
 puts "🏷 Creating discounts..."
 
-discounts = [
+[
   { code: "SAVE10", percentage: 10, active: true },
   { code: "SAVE20", percentage: 20, active: true },
   { code: "EXPIRED5", percentage: 5, active: false }
-].map do |attrs|
-  Discount.create!(attrs)
+].each do |attrs|
+  Discount.find_or_create_by!(code: attrs[:code]) do |d|
+    d.percentage = attrs[:percentage]
+    d.active = attrs[:active]
+  end
 end
 
 puts "✔ Discounts created"
@@ -139,7 +136,6 @@ puts "📑 Creating order items..."
 
 orders.each do |order|
   selected_products = products.sample(rand(1..4))
-
   total = 0
 
   selected_products.each do |product|
@@ -161,30 +157,12 @@ end
 
 puts "✔ Order items created"
 
-# --- REVIEWS ---
-puts "⭐ Creating reviews..."
-
-completed_orders = orders.select(&:completed?)
-
-completed_orders.each do |order|
-  order.products.uniq.each do |product|
-    Review.create!(
-      customer: order.customer,
-      product: product,
-      rating: rand(1..5),
-      comment: "Review for #{product.name}"
-    )
-  end
-end
-
-puts "✔ Reviews created"
-
 # --- WISHLISTS ---
 puts "💖 Creating wishlists..."
 
 customers.each do |customer|
   products.sample(rand(3..6)).each do |product|
-    Wishlist.create!(
+    Wishlist.find_or_create_by!(
       user: customer,
       product: product
     )
@@ -192,5 +170,4 @@ customers.each do |customer|
 end
 
 puts "✔ Wishlists created"
-
 puts "🎉 Seeding complete!"
