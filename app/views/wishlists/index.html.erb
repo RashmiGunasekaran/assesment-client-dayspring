@@ -2,6 +2,10 @@
 <% @wishlists.each do |wishlist| %>
   <div>
     <%= wishlist.product.name %>
-    <%= button_to "Remove", wishlists_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= button_to "Remove",
+      wishlist_path(wishlist),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
   </div>
 <% end %>
+

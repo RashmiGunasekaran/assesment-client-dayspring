@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :order_items
   resources :reviews
-  resources :wishlists
+   resources :wishlists, only: [:index, :create, :destroy]
   resources :vendors
   
   namespace :admin do

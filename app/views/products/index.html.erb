@@ -1,33 +1,77 @@
 
-<div class="mb-4">
-  <h2>Welcome, <%= current_user.name.titleize  || "Guest" %></h2>
-  <p class="text-muted">
-    Use the menu on the left to explore the application.
-  </p>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h3 class="mb-0">Products</h3>
+    <small class="text-muted">
+      Welcome, <%= current_user.name.titleize rescue "Guest" %>
+    </small>
+  </div>
+
+  <%= link_to "+ Add Product", new_product_path, class: "btn btn-primary" %>
 </div>
 
-<h1>Products</h1>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Inventory</th>
-      <th>Vendor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td>
-          <%= link_to product.name, product_path(product) %>
-        </td>
-        <td><%= product.price %></td>
-        <td><%= product.inventory_count %></td>
-        <td><%= product.vendor.name %></td>
-      </tr>
-    <% end %>
-    
-  </tbody>
-</table>
+<div class="card shadow-sm border-0">
+  <div class="table-responsive">
+    <table class="table align-middle mb-0">
+
+      <thead class="table-light">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Inventory</th>
+          <th>Vendor</th>
+          <th class="text-end">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @products.each do |product| %>
+          
+
+            <!-- Product Name -->
+            <td class="fw-semibold">
+              <%= link_to product.name, product_path(product), class: "text-decoration-none" %>
+            </td>
+
+            <!-- Price -->
+            <td><%= number_to_currency(product.price) %></td>
+
+            <!-- Inventory Badge -->
+            <td>
+              <% if product.inventory_count < 10 %>
+                <span class="badge bg-danger">
+                  <%= product.inventory_count %> Low
+                </span>
+              <% else %>
+                <span class="badge bg-success">
+                  <%= product.inventory_count %>
+                </span>
+              <% end %>
+            </td>
+
+            <!-- Vendor -->
+            <td><%= product.vendor&.name %></td>
+
+            <!-- Actions -->
+            <td class="text-end">
+              <%= link_to edit_product_path(product), class: "btn btn-sm btn-outline-secondary me-1" do %>
+                edit
+              <% end %>
+
+              <%= link_to product_path(product),
+                  data: { turbo_method: :delete, turbo_confirm: "Delete this product?" },
+                  class: "btn btn-sm btn-outline-danger" do %>
+                delete
+              <% end %>
+            </td>
+
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+  </div>
+</div>
+
