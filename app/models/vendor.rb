@@ -14,5 +14,3 @@ class Vendor < ApplicationRecord
   # Scope for top-tier vendors
   scope :top_tier, -> { with_many_products.with_positive_balance }
 end
-
-

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :products
   resources :orders
-  resources :order_items
+  resources :order_items 
   resources :reviews
   resources :wishlists
   resources :vendors
@@ -18,6 +18,5 @@ Rails.application.routes.draw do
       end
     end
   end
-
 end
 

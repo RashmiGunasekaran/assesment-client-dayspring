@@ -1,59 +1,168 @@
-<aside class="text-white vh-100 p-3" style="width: 250px;background-color: #e75480;">
-  <div class="bg-pink">
-  <h4 class="mb-4">Dashboard</h4>
+<aside class="sidebar">
 
-  <ul class="nav flex-column gap-2">
+  <!-- Brand -->
+  <div class="brand">
+    <div class="brand-icon">M</div>
+    <span>Miguel Studio</span>
+  </div>
 
-    <!-- Common -->
-    <li class="nav-item">
-      <%= link_to "Products", products_path, class: "nav-link text-white" %>
+  <!-- Main Menu -->
+  <ul class="menu">
+
+    <li class="menu-item">
+      <i class="bi bi-grid"></i>
+      <%= link_to "Dashboard", products_path, class: "menu-link" %>
     </li>
 
-    <li class="nav-item">
-      <%= link_to "Vendors", vendors_path, class: "nav-link text-white" %>
+    <li class="menu-item active">
+      <i class="bi bi-box"></i>
+      <%= link_to "Products", products_path, class: "menu-link" %>
     </li>
 
-    <li class="nav-item">
-      <%= link_to "Orders", orders_path, class: "nav-link text-white" %>
+    <li class="menu-item">
+      <i class="bi bi-cart"></i>
+      <%= link_to "Orders", orders_path, class: "menu-link" %>
     </li>
 
-    <!-- Customer -->
+    <li class="menu-item">
+      <i class="bi bi-people"></i>
+      <%= link_to "Customers", vendors_path, class: "menu-link" %>
+    </li>
+
+    <li class="menu-item">
+      <i class="bi bi-bar-chart"></i>
+      <%= link_to "Analytics", vendors_path, class: "menu-link" %>
+    </li>
+
+    <li class="menu-item">
+      <i class="bi bi-credit-card"></i>
+      <%= link_to "Payments", vendors_path, class: "menu-link" %>
+    </li>
+
+    <!-- Role Based Sections (UNCHANGED LOGIC) -->
+
     <% if current_user.customer? %>
-      <li class="nav-item mt-3 text-uppercase small text-muted">
-        <span class="text-white">Customer</span>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "My Wishlist", wishlists_path, class: "nav-link text-white" %>
+      <li class="section-title">Customer</li>
+      <li class="menu-item">
+        <i class="bi bi-heart"></i>
+        <%= link_to "My Wishlist", wishlists_path, class: "menu-link" %>
       </li>
     <% end %>
 
-    <!-- Vendor -->
     <% if current_user.vendor? %>
-      <li class="nav-item mt-3 text-uppercase small text-muted">
-        <span class="text-white">Vendor</span>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "My Products", products_path, class: "nav-link text-white" %>
+      <li class="section-title">Vendor</li>
+      <li class="menu-item">
+        <i class="bi bi-box-seam"></i>
+        <%= link_to "My Products", products_path, class: "menu-link" %>
       </li>
     <% end %>
 
-    <!-- Admin -->
     <% if current_user.admin? %>
-      <li class="nav-item mt-3 text-uppercase small text-muted">
-        <span class="text-white">Admin</span>
+      <li class="section-title">Admin</li>
+      <li class="menu-item">
+        <i class="bi bi-shield-check"></i>
+        <%= link_to "Admin Products", admin_products_path, class: "menu-link" %>
       </li>
 
-      <li class="nav-item">
-        <%= link_to "Admin Products", admin_products_path, class: "nav-link text-white" %>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "Admin Vendors", admin_vendors_path, class: "nav-link text-white" %>
+      <li class="menu-item">
+        <i class="bi bi-person-badge"></i>
+        <%= link_to "Admin Vendors", admin_vendors_path, class: "menu-link" %>
       </li>
     <% end %>
 
   </ul>
-</div>
+
+  <!-- Bottom Section -->
+  <div class="bottom-menu">
+    <div class="menu-item">
+      <i class="bi bi-question-circle"></i>
+      <span>Help</span>
+    </div>
+
+    <div class="menu-item">
+      <i class="bi bi-gear"></i>
+      <span>Settings</span>
+    </div>
+  </div>
+
 </aside>
+
+
+<style>
+  .sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  background: #3b82f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.menu-item:hover {
+  background: #f3f4f6;
+}
+
+.menu-item.active {
+  background: #eef2ff;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  color: #9ca3af;
+}
+
+.bottom-menu {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 15px;
+}
+</style>

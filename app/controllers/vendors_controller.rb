@@ -10,4 +10,4 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find(params[:id])
   end
 
-end
+  end

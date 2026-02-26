@@ -8,6 +8,7 @@ class Admin::VendorsController < ApplicationController
   def top
     @vendors = Vendor.top_tier
   end
+
 end
 
 
