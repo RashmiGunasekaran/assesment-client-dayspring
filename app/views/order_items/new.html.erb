@@ -1,0 +1,34 @@
+
+
+
+<h1>Order The Products</h1>
+
+
+
+<%= form_with model:@order do |f|%>
+
+<div>
+<%=f.label :Id_for_order %>
+<%= f.collection_select :order_id, Order.all, :id, :customer_id%>
+</div>
+
+<div>
+<%=f.label :Id_for_Product %>
+<%= f.collection_select :product_id, Product.all, :id, :name%>
+</div>
+<div>
+<%=f.label :quantity %>
+<%=f.number_field :quantity %>
+</div>
+
+<div>
+<%=f.label :price %>
+<%=f.number_field :unit_price %>
+</div>
+
+<div>
+<%=f.submit "Submit"%>
+</div>
+
+<%end%>
+
